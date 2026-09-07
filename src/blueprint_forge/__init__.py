@@ -1,7 +1,7 @@
 # application
 from .application.graphviz.renderer import GraphvizRenderer
-from .application.graphviz.application import GraphvizApplication
-from .application.inputs import QuestionData
+from .application.graphviz_service import GraphvizService
+from .application.question.inputs import QuestionData
 from .application.question_service import QuestionService
 from .application.exceptions.application_exceptions import InvalidQuestionSourceData
 
@@ -40,6 +40,3 @@ from .infrastructure.exceptions.infrastructure_exceptions import (
     YAMLFileNotFound,
     ConfigFileNotFound,
     )
-
-# presentation
-from .presentation.cli import *

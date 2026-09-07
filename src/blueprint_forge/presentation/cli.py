@@ -2,7 +2,7 @@ from pathlib import Path
 
 import typer
 
-from blueprint_forge.application.graphviz.application import GraphvizApplication
+from blueprint_forge.application.graphviz_service import GraphvizService
 
 app = typer.Typer()
 
@@ -19,7 +19,7 @@ def generate(
     footer: Path = typer.Option(..., "--footer"),
     output: Path = typer.Option(..., "--output"),
 ):
-    application = GraphvizApplication()
+    application = GraphvizService()
     
     application.generate(
         yaml_path=source,

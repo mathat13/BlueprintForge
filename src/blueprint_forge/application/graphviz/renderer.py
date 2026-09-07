@@ -4,8 +4,8 @@ from blueprint_forge.representation.graphviz.graph import GraphvizGraph
 from blueprint_forge.representation.graphviz.config import GraphvizConfig
 
 class GraphvizRenderer:
+    @staticmethod
     def render(
-        self,
         graph: GraphvizGraph,
         config: GraphvizConfig,
     ) -> str:

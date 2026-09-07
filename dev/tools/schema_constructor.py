@@ -1,7 +1,7 @@
 from pathlib import Path
 import json
 
-from blueprint_forge.application.inputs import QuestionData
+from blueprint_forge.application.question.inputs import QuestionData
 
 
 def main():

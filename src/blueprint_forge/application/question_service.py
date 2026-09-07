@@ -6,12 +6,12 @@ from blueprint_forge.domain.question_collection import QuestionCollection
 
 from blueprint_forge.infrastructure.yaml_parser import YAMLParser
 
-from blueprint_forge.application.inputs import QuestionData
+from blueprint_forge.application.question.inputs import QuestionData
 from blueprint_forge.application.exceptions.application_exceptions import InvalidQuestionSourceData
 
 class QuestionService:
+    @staticmethod
     def load(
-            self,
             yaml_path: Path,
         ) -> QuestionCollection:
             

@@ -40,7 +40,7 @@ def test_generate_passes_arguments_to_application():
     mock_application = MagicMock()
 
     with patch(
-        "blueprint_forge.presentation.cli.GraphvizApplication",
+        "blueprint_forge.presentation.cli.GraphvizService",
         return_value=mock_application,
     ):
         result = runner.invoke(
