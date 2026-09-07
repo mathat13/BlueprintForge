@@ -7,4 +7,5 @@ GraphvizService.generate:
       - prerequisites become graph edges
       - output is rendered
     unhappy:
-      -
+      - QuestionService.load failures propagate
+      - GraphvizConfigLoader failures propagate
