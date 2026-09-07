@@ -1,7 +1,10 @@
 GraphvizService.generate:  
   integration:
-    - valid QuestionCollection produces Graphviz output
-    - configuration is incorporated
-    - questions become graph nodes
-    - prerequisites become graph edges
-    - output is rendered
+    happy:
+      - valid QuestionCollection produces Graphviz output
+      - configuration is incorporated
+      - questions become graph nodes
+      - prerequisites become graph edges
+      - output is rendered
+    unhappy:
+      -

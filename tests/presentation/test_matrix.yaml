@@ -1,0 +1,23 @@
+CLI:
+  verify:
+    local:
+      valid:
+        - all mandatory arguments provided
+      invalid:
+        - mandatory argument not provided
+    integration:
+      - successful verification produces success exit status
+      - expected application exception produces user-facing error
+      - application failure produces non-zero exit status
+
+  generate:
+    local:
+      valid:
+        - all mandatory arguments and options provided
+      invalid:
+        - mandatory argument not provided
+        - mandatory option not provided
+    integration:
+      - successful generation produces success exit status
+      - expected application exception produces user-facing error
+      - application failure produces non-zero exit status

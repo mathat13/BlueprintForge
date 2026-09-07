@@ -6,7 +6,10 @@ QuestionService.load:
       - non-dictionary
       - dictionary without a non-empty questions mapping
   integration:
-      - valid source data produces valid QuestionCollection
-      - invalid QuestionData is rejected
-      - invalid Question is rejected
-      - invalid QuestionCollection is rejected
+      happy:
+        - valid source data produces valid QuestionCollection
+      unhappy:
+        - QuestionData validation failures propagate
+        - Question construction failures propagate
+        - QuestionCollection construction failures propagate
+        - YAMLParser failures propagate
