@@ -1,32 +1,32 @@
 import pytest
 
 from pathlib import Path
+
 from typer.testing import CliRunner
 from pytest_mock import mocker
 
 from blueprint_forge import (
     create_cli,
-    GraphvizService,
+    InvalidKnowledgeType
 )
-
-from blueprint_forge.domain.exceptions.domain_exceptions import *
-from blueprint_forge.application.exceptions.application_exceptions import *
-from blueprint_forge.infrastructure.exceptions.infrastructure_exceptions import *
 
 
 runner = CliRunner()
 
-def test_cli_exposes_verify_command(cli_app):
+def test_cli_exposes_generate_command(cli_app):
     result = runner.invoke(cli_app, ["--help"])
 
     assert result.exit_code == 0
-    assert "verify" in result.stdout
+    assert "generate" in result.stdout
 
 def test_generate_command_exposes_arguments_and_options(cli_app):
-    result = runner.invoke(cli_app, ["verify", "--help"])
+    result = runner.invoke(cli_app, ["generate", "--help"])
 
     assert result.exit_code == 0
     assert "source" in result.stdout
+    assert "header" in result.stdout
+    assert "footer" in result.stdout
+    assert "output" in result.stdout
 
 def test_generate_returns_error_when_command_is_invalid(cli_app):
     result = runner.invoke(
