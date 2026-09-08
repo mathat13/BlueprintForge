@@ -5,9 +5,19 @@ from tests.factories.DataFactories import QuestionYamlFactory
 
 from blueprint_forge import (
     Question,
-    QuestionData,
+    create_cli,
+    GraphvizService,
+    QuestionService,
 )
 
+@pytest.fixture
+def cli_app():
+    return create_cli(
+        graphviz_service=GraphvizService(
+            question_service=QuestionService(),
+        ),
+        question_service=QuestionService(),
+    )
 
 @pytest.fixture
 def questions() -> List[Question]:

@@ -8,7 +8,6 @@ CLI:
     integration:
       - successful verification produces success exit status
       - expected application exception produces user-facing error
-      - application failure produces non-zero exit status
 
   generate:
     local:
@@ -20,4 +19,3 @@ CLI:
     integration:
       - successful generation produces success exit status
       - expected application exception produces user-facing error
-      - application failure produces non-zero exit status

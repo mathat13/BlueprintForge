@@ -6,7 +6,7 @@ class YAMLFileNotFound(Exception):
         self.path = path
 
         super().__init__(
-            f"Attempt to load YAML file {path.as_posix()} failed, "
+            f"Attempt to load YAML file {str(path)} failed, "
             f"Please check file exists."
         )
 
@@ -16,6 +16,6 @@ class ConfigFileNotFound(Exception):
         self.path = path
 
         super().__init__(
-            f"Attempt to load config file {path.as_posix()} failed, "
+            f"Attempt to load config file {str(path)} failed, "
             f"Please check file exists."
         )

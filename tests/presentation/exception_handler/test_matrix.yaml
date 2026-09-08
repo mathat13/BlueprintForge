@@ -1,0 +1,6 @@
+handle_exception:
+  local:
+    valid:
+      - expected application exceptions are written to stderr
+      - expected application exceptions produce non-zero exit
+      - unexpected exceptions propagate

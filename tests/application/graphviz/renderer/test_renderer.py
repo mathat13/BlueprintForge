@@ -16,7 +16,7 @@ def test_GraphVizRenderer_renders_correctly(questions: List[Question]):
         header="HEADER",
         footer="FOOTER",
     )
-    
+
     question_collection = QuestionCollection(questions=questions)
     graph = GraphvizGraph.from_question_collection(collection=question_collection)
 
